@@ -4,8 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BASE_URL } from "../../../constants/Api";
 import GameDetailItem from "./GameDetailItem";
-import GameGenres from "./GameGenres";
-import GamePlatforms from "./GamePlatforms";
+//import GameGenres from "./GameGenres";
+//import GamePlatforms from "./GamePlatforms";
 
 
 
@@ -15,6 +15,7 @@ export function Details(){
     const urlPath = window.location.pathname.split("/");
     // GET ID FROM URL
     const id = urlPath[urlPath.length-1];
+    const newUrl = BASE_URL + "/" + id;
 
     const [games, setGames] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -22,7 +23,7 @@ export function Details(){
 
     // API CALL
     useEffect(() => {
-        fetch(BASE_URL+ "/" + id)
+        fetch(newUrl)
             .then(response => response.json())
             .then(json => { 
                 setGames(json)

@@ -16,6 +16,11 @@ export function GameGenres({genres}){
 
 };
 
+GameGenres.propTypes = {
+    genres: PropTypes.object.isRequired
+
+}
+
 
 
 

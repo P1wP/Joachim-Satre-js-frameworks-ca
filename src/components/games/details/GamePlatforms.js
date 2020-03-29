@@ -15,5 +15,9 @@ export function GamePlatforms({platforms}){
     
 
 };
+GamePlatforms.propTypes = {
+    platforms: PropTypes.object.isRequired
+}
+
 
 export default GamePlatforms;

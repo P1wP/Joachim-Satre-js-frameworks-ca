@@ -32,11 +32,12 @@ function GameList(){
             .finally(() => setLoading(false));
     }, []);// END FETCH;
     
-    // SET LOCALSTORAGE
+    /* SET LOCALSTORAGE
     localStorage.setItem("games", JSON.stringify(games));
     var test = localStorage.getItem("games");
     var newJson = JSON.parse(test);
     console.log(games[0]);
+    */
     
     const filterGames = function(e){
         // VALUE FROM SEARCH INPUT
